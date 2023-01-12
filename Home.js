@@ -5,11 +5,12 @@ import { View, Image, Text } from 'react-native';
 const Home = (props) => {
     return (
         <View style = {styles.container}>
+            <Text style={styles.title}>Test</Text>
             <Image 
                 style={styles.globologo}
                 source={require('./images/politics.png')}>
             </Image>
-            <Text style={styles.title}>Knockout</Text>
+            <Text style={styles.title}>{props.username}</Text>
             <View style={styles.textcontainer}>
                 <Text style={styles.content}>{introText}</Text>
             </View>
@@ -25,11 +26,12 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
         alignItems: 'center',
-        padding: 20
+        paddingTop: 20,
+        paddingBottom: 20,
+        flex:1
     },
     textcontainer:{
-        textAlign: 'center',
-        paddingTop: 10
+        padding: 20
     },
     globologo: {
         height: 100,
